@@ -1,0 +1,539 @@
+<Rive version="1" kind="fragment">
+    <Artboard defaultStateMachineId="0:7" viewModelId="0:40" viewModelInstanceId="0:41" width="1400" height="1000" styleId="0:3" name="Sphere" id="0:2">
+        <LayoutComponentStyle name="Artboard Style" id="0:3"/>
+        <Fill name="Background">
+            <SolidColor colorValue="FF02040A" name="Color"/>
+        </Fill>
+
+        <!-- Panels over the canvas, pinned inside the artboard's edges: captions
+             on the left, the blob list, palette and clock on the right. -->
+        <LayoutComponent clip="false" styleId="0:11" name="Overlay" id="0:10">
+            <LayoutComponentStyle positionTypeValue="absolute" widthUnitsValue="auto" heightUnitsValue="auto"
+                positionLeft="40" positionLeftUnitsValue="points"
+                positionRight="40" positionRightUnitsValue="points"
+                positionTop="36" positionTopUnitsValue="points"
+                positionBottom="36" positionBottomUnitsValue="points"
+                flexDirectionValue="row" layoutAlignmentType="spaceBetweenStart"
+                name="Overlay Style" id="0:11"/>
+
+            <LayoutComponent clip="false" styleId="0:101" name="Left" id="0:100">
+                <LayoutComponentStyle layoutWidthScaleType="hug" layoutHeightScaleType="fill"
+                    flexDirectionValue="column" layoutAlignmentType="spaceBetweenStart" name="Left Style" id="0:101"/>
+
+                <LayoutComponent clip="false" styleId="0:13" name="Title" id="0:12">
+
+                    <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:190"/>
+                    <LayoutComponentStyle layoutWidthScaleType="hug" layoutHeightScaleType="hug"
+                        flexDirectionValue="column" gapVertical="8" gapVerticalUnitsValue="points" name="Title Style" id="0:13"/>
+                    <Text name="Heading" id="0:14">
+                        <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Heading Layout"/>
+                        <TextStylePaint fontSize="15" letterSpacing="3" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Heading Style" id="0:15">
+                            <Fill name="Fill">
+                                <SolidColor colorValue="B3FFFFFF" name="Color"/>
+                            </Fill>
+                        </TextStylePaint>
+                        <TextValueRun styleId="0:15" text="CONTOUR FIELD" name="Run"/>
+                        <TextModifierGroup modifyOpacity="true" invertOpacity="true" modifyTranslation="true" opacity="0" y="-10" name="Type In" id="0:202">
+                            <TextModifierRange modifyFrom="0" modifyTo="2" falloffFrom="0.15" falloffTo="2" name="Reveal" id="0:203">
+                                <DataBindContext sourcePathIds="0:40-0:56" propertyKey="319" converterId="0:191"/>
+                            </TextModifierRange>
+                        </TextModifierGroup>
+                    </Text>
+                    <Text name="Field" id="0:16">
+                        <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Field Layout"/>
+                        <TextStylePaint fontSize="13" letterSpacing="1.5" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Field Style" id="0:17">
+                            <Fill name="Fill">
+                                <SolidColor colorValue="6BB4C8FF" name="Color"/>
+                            </Fill>
+                        </TextStylePaint>
+                        <TextValueRun styleId="0:17" text="FBM 3+2 OCT   WARP 0.90   ISO 30   DEPTH 0.16" name="Run">
+                            <DataBindContext sourcePathIds="0:40-0:48" propertyKey="268"/>
+                        </TextValueRun>
+                        <TextModifierGroup modifyOpacity="true" invertOpacity="true" modifyTranslation="true" opacity="0" y="-8" name="Type In" id="0:204">
+                            <TextModifierRange modifyFrom="0" modifyTo="2" falloffFrom="0.15" falloffTo="2" name="Reveal" id="0:205">
+                                <DataBindContext sourcePathIds="0:40-0:56" propertyKey="319" converterId="0:192"/>
+                            </TextModifierRange>
+                        </TextModifierGroup>
+                    </Text>
+                </LayoutComponent>
+
+                <LayoutComponent clip="false" styleId="0:207" name="Status" id="0:206">
+                    <LayoutComponentStyle layoutWidthScaleType="hug" layoutHeightScaleType="hug"
+                        flexDirectionValue="row" layoutAlignmentType="centerLeft"
+                        gapHorizontal="20" gapHorizontalUnitsValue="points" name="Status Style" id="0:207"/>
+                <Text name="Tracking" id="0:20">
+                    <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Tracking Layout"/>
+                    <TextStylePaint fontSize="13" letterSpacing="1.5" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Tracking Style" id="0:21">
+                        <Fill name="Fill">
+                            <SolidColor colorValue="8CFFFFFF" name="Color"/>
+                        </Fill>
+                    </TextStylePaint>
+                    <TextValueRun styleId="0:21" text="BLOB TRACK   00 LOCKED" name="Run">
+                        <DataBindContext sourcePathIds="0:40-0:49" propertyKey="268"/>
+                    </TextValueRun>
+                </Text>
+                    <LayoutComponent clip="false" styleId="0:209" name="Rebuild" id="0:208">
+                        <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:194"/>
+                        <LayoutComponentStyle layoutWidthScaleType="hug" layoutHeightScaleType="hug"
+                            paddingLeft="12" paddingLeftUnitsValue="points" paddingRight="12" paddingRightUnitsValue="points"
+                            paddingTop="6" paddingTopUnitsValue="points" paddingBottom="6" paddingBottomUnitsValue="points"
+                            cornerRadiusTL="3" name="Rebuild Style" id="0:209"/>
+                        <Stroke thickness="1" name="Stroke">
+                            <SolidColor colorValue="59FFFFFF" name="Color"/>
+                        </Stroke>
+                        <Text name="Rebuild Label" id="0:210">
+                            <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Rebuild Label Layout"/>
+                            <TextStylePaint fontSize="11" letterSpacing="1.8" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Rebuild Label Style" id="0:211">
+                                <Fill name="Fill">
+                                    <SolidColor colorValue="BFFFFFFF" name="Color"/>
+                                </Fill>
+                            </TextStylePaint>
+                            <TextValueRun styleId="0:211" text="REBUILD" name="Run"/>
+                        </Text>
+                    </LayoutComponent>
+                </LayoutComponent>
+            </LayoutComponent>
+
+            <LayoutComponent clip="false" width="340" styleId="0:103" name="Right" id="0:102">
+                <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fill"
+                    flexDirectionValue="column" layoutAlignmentType="spaceBetweenEnd" name="Right Style" id="0:103"/>
+
+                <!-- The tracked blobs, one BlobRow per lock, scrolling once they
+                     outgrow the viewport. -->
+                <LayoutComponent clip="false" width="340" styleId="0:105" name="Blobs" id="0:104">
+                    <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:193"/>
+                    <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="hug"
+                        flexDirectionValue="column" gapVertical="10" gapVerticalUnitsValue="points" name="Blobs Style" id="0:105"/>
+
+                    <LayoutComponent clip="false" width="340" styleId="0:107" name="Header" id="0:106">
+                        <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="hug"
+                            flexDirectionValue="row" layoutAlignmentType="spaceBetweenCenter" name="Header Style" id="0:107"/>
+                        <Text name="Blobs Title" id="0:108">
+                            <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Blobs Title Layout"/>
+                            <TextStylePaint fontSize="13" letterSpacing="1.5" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Blobs Title Style" id="0:109">
+                                <Fill name="Fill">
+                                    <SolidColor colorValue="8CFFFFFF" name="Color"/>
+                                </Fill>
+                            </TextStylePaint>
+                            <TextValueRun styleId="0:109" text="TRACKED BLOBS" name="Run"/>
+                        </Text>
+                        <Text name="Blob Count" id="0:110">
+                            <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Blob Count Layout"/>
+                            <TextStylePaint fontSize="13" letterSpacing="1.5" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Blob Count Style" id="0:111">
+                                <Fill name="Fill">
+                                    <SolidColor colorValue="D9FFFFFF" name="Color"/>
+                                </Fill>
+                            </TextStylePaint>
+                            <TextValueRun styleId="0:111" text="00" name="Run">
+                                <DataBindContext sourcePathIds="0:40-0:55" propertyKey="268" converterId="0:94"/>
+                            </TextValueRun>
+                        </Text>
+                    </LayoutComponent>
+
+                    <LayoutComponent clip="false" width="340" height="1" styleId="0:113" name="Rule" id="0:112">
+                        <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" name="Rule Style" id="0:113"/>
+                        <Fill name="Fill">
+                            <SolidColor colorValue="33FFFFFF" name="Color"/>
+                        </Fill>
+                    </LayoutComponent>
+
+                    <LayoutComponent clip="false" width="340" styleId="0:115" name="Body" id="0:114">
+                        <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="hug"
+                            flexDirectionValue="row" gapHorizontal="6" gapHorizontalUnitsValue="points" name="Body Style" id="0:115"/>
+
+                        <LayoutComponent clip="true" width="332" height="270" styleId="0:117" name="Viewport" id="0:116">
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed"
+                                flexDirectionValue="column" name="Viewport Style" id="0:117"/>
+                            <LayoutComponent clip="false" width="332" styleId="0:119" name="Content" id="0:118">
+                                <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="hug"
+                                    flexDirectionValue="column" gapVertical="2" gapVerticalUnitsValue="points" name="Content Style" id="0:119"/>
+                                <ScrollConstraint directionValue="vertical" physicsId="0:90" name="Scroll" id="0:120"/>
+                                <ArtboardComponentList name="Rows" id="0:121">
+                                    <DataBindContext sourcePathIds="0:40-0:55" propertyKey="800"/>
+                                </ArtboardComponentList>
+                            </LayoutComponent>
+                        </LayoutComponent>
+
+                        <LayoutComponent clip="false" width="2" height="270" styleId="0:123" name="Track" id="0:122">
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" name="Track Style" id="0:123"/>
+                            <Fill name="Fill">
+                                <SolidColor colorValue="14FFFFFF" name="Color"/>
+                            </Fill>
+                            <LayoutComponent clip="false" width="2" height="80" styleId="0:125" name="Thumb" id="0:124">
+                                <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" name="Thumb Style" id="0:125"/>
+                                <Fill name="Fill">
+                                    <SolidColor colorValue="80FFFFFF" name="Color"/>
+                                </Fill>
+                                <ScrollBarConstraint scrollConstraintId="0:120" directionValue="vertical" name="Bar"/>
+                            </LayoutComponent>
+                        </LayoutComponent>
+                    </LayoutComponent>
+                </LayoutComponent>
+
+                <!-- Palette chooser and clock. Each swatch writes its index to
+                     palette; the ring slides under the chosen one. -->
+                <LayoutComponent clip="false" styleId="0:131" name="Footer" id="0:130">
+                    <LayoutComponentStyle layoutWidthScaleType="hug" layoutHeightScaleType="hug"
+                        flexDirectionValue="column" layoutAlignmentType="topRight"
+                        gapVertical="16" gapVerticalUnitsValue="points" name="Footer Style" id="0:131"/>
+                    <Text name="Palette Name" id="0:132">
+                        <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:194"/>
+                        <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Palette Name Layout"/>
+                        <TextStylePaint fontSize="13" letterSpacing="1.5" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Palette Name Style" id="0:133">
+                            <Fill name="Fill">
+                                <SolidColor colorValue="8CFFFFFF" name="Color"/>
+                            </Fill>
+                        </TextStylePaint>
+                        <TextValueRun styleId="0:133" text="PALETTE   COBALT" name="Run">
+                            <DataBindContext sourcePathIds="0:40-0:54" propertyKey="268"/>
+                        </TextValueRun>
+                    </Text>
+
+                    <LayoutComponent clip="false" styleId="0:135" name="Swatches" id="0:134">
+                        <LayoutComponentStyle layoutWidthScaleType="hug" layoutHeightScaleType="hug"
+                            flexDirectionValue="row" gapHorizontal="12" gapHorizontalUnitsValue="points" name="Swatches Style" id="0:135"/>
+                        <LayoutComponent clip="false" width="48" height="48" styleId="0:137" name="Ring" id="0:136">
+                            <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:200"/>
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed"
+                                positionTypeValue="absolute" positionTop="-4" positionTopUnitsValue="points"
+                                positionLeft="-4" positionLeftUnitsValue="points" cornerRadiusTL="9" name="Ring Style" id="0:137">
+                                <DataBindContext sourcePathIds="0:40-0:53" propertyKey="516" converterId="0:95"/>
+                            </LayoutComponentStyle>
+                            <Stroke thickness="1" name="Stroke">
+                                <SolidColor colorValue="E6FFFFFF" name="Color"/>
+                            </Stroke>
+                        </LayoutComponent>
+                        <LayoutComponent clip="false" width="40" height="40" styleId="0:141" name="Cobalt" id="0:140">
+                            <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:195"/>
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" cornerRadiusTL="7" name="Cobalt Style" id="0:141"/>
+                            <Fill name="Fill">
+                                <LinearGradient startX="0" startY="0" endX="40" endY="40" name="Gradient">
+                                    <GradientStop colorValue="FF7C9BFF" position="0"/>
+                                    <GradientStop colorValue="FF0C1638" position="1"/>
+                                </LinearGradient>
+                            </Fill>
+                        </LayoutComponent>
+                        <LayoutComponent clip="false" width="40" height="40" styleId="0:143" name="Ember" id="0:142">
+                            <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:196"/>
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" cornerRadiusTL="7" name="Ember Style" id="0:143"/>
+                            <Fill name="Fill">
+                                <LinearGradient startX="0" startY="0" endX="40" endY="40" name="Gradient">
+                                    <GradientStop colorValue="FFFF8A3D" position="0"/>
+                                    <GradientStop colorValue="FF2E0F06" position="1"/>
+                                </LinearGradient>
+                            </Fill>
+                        </LayoutComponent>
+                        <LayoutComponent clip="false" width="40" height="40" styleId="0:145" name="Aurora" id="0:144">
+                            <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:197"/>
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" cornerRadiusTL="7" name="Aurora Style" id="0:145"/>
+                            <Fill name="Fill">
+                                <LinearGradient startX="0" startY="0" endX="40" endY="40" name="Gradient">
+                                    <GradientStop colorValue="FF45F0B6" position="0"/>
+                                    <GradientStop colorValue="FF05261F" position="1"/>
+                                </LinearGradient>
+                            </Fill>
+                        </LayoutComponent>
+                        <LayoutComponent clip="false" width="40" height="40" styleId="0:147" name="Ultraviolet" id="0:146">
+                            <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:198"/>
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" cornerRadiusTL="7" name="Ultraviolet Style" id="0:147"/>
+                            <Fill name="Fill">
+                                <LinearGradient startX="0" startY="0" endX="40" endY="40" name="Gradient">
+                                    <GradientStop colorValue="FFC774FF" position="0"/>
+                                    <GradientStop colorValue="FF200B38" position="1"/>
+                                </LinearGradient>
+                            </Fill>
+                        </LayoutComponent>
+                        <LayoutComponent clip="false" width="40" height="40" styleId="0:149" name="Ivory" id="0:148">
+                            <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:199"/>
+                            <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" cornerRadiusTL="7" name="Ivory Style" id="0:149"/>
+                            <Fill name="Fill">
+                                <LinearGradient startX="0" startY="0" endX="40" endY="40" name="Gradient">
+                                    <GradientStop colorValue="FFEAE7E0" position="0"/>
+                                    <GradientStop colorValue="FF1B1B1E" position="1"/>
+                                </LinearGradient>
+                            </Fill>
+                        </LayoutComponent>
+                    </LayoutComponent>
+
+                    <Text name="Clock" id="0:22">
+
+                        <DataBindContext sourcePathIds="0:40-0:56" propertyKey="18" converterId="0:194"/>
+                        <LayoutParticipant layoutWidthScaleType="hug" layoutHeightScaleType="hug" name="Clock Layout"/>
+                        <TextStylePaint fontSize="13" letterSpacing="1.5" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Clock Style" id="0:23">
+                            <Fill name="Fill">
+                                <SolidColor colorValue="6BB4C8FF" name="Color"/>
+                            </Fill>
+                        </TextStylePaint>
+                        <TextValueRun styleId="0:23" text="T+ 00:00.00" name="Run">
+                            <DataBindContext sourcePathIds="0:40-0:50" propertyKey="268"/>
+                        </TextValueRun>
+                    </Text>
+                </LayoutComponent>
+            </LayoutComponent>
+        </LayoutComponent>
+
+        <LayoutComponent clip="true" styleId="0:31" name="Stage" id="0:30">
+            <LayoutComponentStyle layoutWidthScaleType="fill" layoutHeightScaleType="fill" name="Stage Style" id="0:31"/>
+            <ScriptedLayout scriptAssetId="0:80" name="Contour Sphere" id="0:32">
+                <ScriptInputNumber propertyValue="1" name="speed">
+                    <DataBindContext sourcePathIds="0:40-0:42" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputNumber propertyValue="1" name="spin">
+                    <DataBindContext sourcePathIds="0:40-0:43" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputNumber propertyValue="30" name="lines">
+                    <DataBindContext sourcePathIds="0:40-0:44" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputNumber propertyValue="0.16" name="depth">
+                    <DataBindContext sourcePathIds="0:40-0:51" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputNumber propertyValue="1" name="detail">
+                    <DataBindContext sourcePathIds="0:40-0:52" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputNumber propertyValue="0" name="palette">
+                    <DataBindContext sourcePathIds="0:40-0:53" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputNumber propertyValue="1" name="bloom">
+                    <DataBindContext sourcePathIds="0:40-0:45" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputNumber propertyValue="1" name="aberration">
+                    <DataBindContext sourcePathIds="0:40-0:46" propertyKey="243"/>
+                </ScriptInputNumber>
+                <ScriptInputBoolean propertyValue="true" name="tracking">
+                    <DataBindContext sourcePathIds="0:40-0:47" propertyKey="245"/>
+                </ScriptInputBoolean>
+                <ScriptInputTrigger name="rebuild">
+                    <DataBindContext sourcePathIds="0:40-0:57" propertyKey="870"/>
+                </ScriptInputTrigger>
+            </ScriptedLayout>
+        </LayoutComponent>
+
+
+        <!-- The sound, a script of its own so a host without audio keeps the
+             visuals. It reads build, palette, locks and losses. -->
+        <ScriptedDrawable scriptAssetId="0:303" name="Soundtrack" id="0:300"/>
+
+        <StateMachine name="State Machine" id="0:7">
+            <StateMachineLayer name="Layer" id="0:8">
+                <EntryState x="0" y="0">
+                    <StateTransition stateToId="0:9"/>
+                </EntryState>
+                <AnimationState x="200" y="0" animationId="0:6" id="0:9"/>
+            </StateMachineLayer>
+            <StateMachineListenerSingle targetId="0:140" listenerTypeValue="click" name="Pick Cobalt">
+                <ListenerViewModelChange>
+                    <BindablePropertyNumber propertyValue="0">
+                        <DataBindContext sourcePathIds="0:40-0:53" propertyKey="636" direction="true"/>
+                    </BindablePropertyNumber>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:142" listenerTypeValue="click" name="Pick Ember">
+                <ListenerViewModelChange>
+                    <BindablePropertyNumber propertyValue="1">
+                        <DataBindContext sourcePathIds="0:40-0:53" propertyKey="636" direction="true"/>
+                    </BindablePropertyNumber>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:144" listenerTypeValue="click" name="Pick Aurora">
+                <ListenerViewModelChange>
+                    <BindablePropertyNumber propertyValue="2">
+                        <DataBindContext sourcePathIds="0:40-0:53" propertyKey="636" direction="true"/>
+                    </BindablePropertyNumber>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:146" listenerTypeValue="click" name="Pick Ultraviolet">
+                <ListenerViewModelChange>
+                    <BindablePropertyNumber propertyValue="3">
+                        <DataBindContext sourcePathIds="0:40-0:53" propertyKey="636" direction="true"/>
+                    </BindablePropertyNumber>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:208" listenerTypeValue="click" name="Rebuild">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:57" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:148" listenerTypeValue="click" name="Pick Ivory">
+                <ListenerViewModelChange>
+                    <BindablePropertyNumber propertyValue="4">
+                        <DataBindContext sourcePathIds="0:40-0:53" propertyKey="636" direction="true"/>
+                    </BindablePropertyNumber>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <!-- Hovering a button tells the sound, which blips in and bloops out. -->
+            <StateMachineListenerSingle targetId="0:208" listenerTypeValue="enter" name="Hover Rebuild">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:304" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:208" listenerTypeValue="exit" name="Leave Rebuild">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:305" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:140" listenerTypeValue="enter" name="Hover Cobalt">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:304" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:140" listenerTypeValue="exit" name="Leave Cobalt">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:305" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:142" listenerTypeValue="enter" name="Hover Ember">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:304" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:142" listenerTypeValue="exit" name="Leave Ember">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:305" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:144" listenerTypeValue="enter" name="Hover Aurora">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:304" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:144" listenerTypeValue="exit" name="Leave Aurora">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:305" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:146" listenerTypeValue="enter" name="Hover Ultraviolet">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:304" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:146" listenerTypeValue="exit" name="Leave Ultraviolet">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:305" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:148" listenerTypeValue="enter" name="Hover Ivory">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:304" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:148" listenerTypeValue="exit" name="Leave Ivory">
+                <ListenerViewModelChange>
+                    <BindablePropertyTrigger>
+                        <DataBindContext sourcePathIds="0:40-0:305" propertyKey="686" direction="true"/>
+                    </BindablePropertyTrigger>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+        </StateMachine>
+        <LinearAnimation loopValue="loop" duration="60" name="Idle" id="0:6"/>
+    </Artboard>
+
+    <!-- The build sequence brings the panels up in a stagger as its progress
+         climbs from 0 to 1 over 4.6 s, and types the captions in. Blobs In
+         matches Intro.panel in intro.as. -->
+    <DataConverterRangeMapper minInput="0.6304" maxInput="0.7174" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Title In" id="0:190"/>
+    <DataConverterRangeMapper minInput="0.6304" maxInput="0.7826" minOutput="-0.15" maxOutput="1" clampLower="true" clampUpper="true" name="Type Heading" id="0:191"/>
+    <DataConverterRangeMapper minInput="0.6739" maxInput="0.8478" minOutput="-0.15" maxOutput="1" clampLower="true" clampUpper="true" name="Type Field" id="0:192"/>
+    <DataConverterRangeMapper minInput="0.6957" maxInput="0.8261" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Blobs In" id="0:193"/>
+    <DataConverterRangeMapper minInput="0.7609" maxInput="0.8696" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Footer In" id="0:194"/>
+    <DataConverterRangeMapper minInput="0.8043" maxInput="0.8696" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Swatch 1 In" id="0:195"/>
+    <DataConverterRangeMapper minInput="0.8261" maxInput="0.8913" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Swatch 2 In" id="0:196"/>
+    <DataConverterRangeMapper minInput="0.8478" maxInput="0.9130" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Swatch 3 In" id="0:197"/>
+    <DataConverterRangeMapper minInput="0.8696" maxInput="0.9348" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Swatch 4 In" id="0:198"/>
+    <DataConverterRangeMapper minInput="0.8913" maxInput="0.9565" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Swatch 5 In" id="0:199"/>
+    <DataConverterRangeMapper minInput="0.9565" maxInput="1.0000" minOutput="0" maxOutput="1" clampLower="true" clampUpper="true" name="Ring In" id="0:200"/>
+
+    <ElasticScrollPhysics friction="2.5" speedMultiplier="1.2" elasticFactor="0.7" name="Physics" id="0:90"/>
+
+    <!-- The blob count: the list's length as two digits. -->
+    <DataConverterGroup name="Blob Count" id="0:94">
+        <DataConverterGroupItem converterId="0:91"/>
+        <DataConverterGroupItem converterId="0:92"/>
+        <DataConverterGroupItem converterId="0:93"/>
+    </DataConverterGroup>
+    <DataConverterListToLength name="Length" id="0:91"/>
+    <DataConverterToString decimals="0" round="true" name="As Text" id="0:92"/>
+    <DataConverterStringPad length="2" text="0" padType="0" name="Two Digits" id="0:93"/>
+
+    <!-- The ring's offset under swatch n, 40 wide with 12 between, eased. -->
+    <DataConverterGroup name="Ring Offset" id="0:95">
+        <DataConverterGroupItem converterId="0:96"/>
+        <DataConverterGroupItem converterId="0:97"/>
+    </DataConverterGroup>
+    <DataConverterRangeMapper minInput="0" maxInput="4" minOutput="-4" maxOutput="204" name="Swatch To Offset" id="0:96"/>
+    <DataConverterInterpolator interpolationType="cubic" duration="0.35" name="Ease" id="0:97">
+        <CubicEaseInterpolator x1="0.25" y1="0.1" x2="0.25" y2="1"/>
+    </DataConverterInterpolator>
+
+    <ViewModel defaultInstanceId="0:41" name="Field" id="0:40">
+        <ViewModelPropertyNumber name="speed" id="0:42"/>
+        <ViewModelPropertyNumber name="spin" id="0:43"/>
+        <ViewModelPropertyNumber name="lines" id="0:44"/>
+        <ViewModelPropertyNumber name="bloom" id="0:45"/>
+        <ViewModelPropertyNumber name="aberration" id="0:46"/>
+        <ViewModelPropertyBoolean name="tracking" id="0:47"/>
+        <ViewModelPropertyString name="fieldLabel" id="0:48"/>
+        <ViewModelPropertyString name="trackLabel" id="0:49"/>
+        <ViewModelPropertyString name="clockLabel" id="0:50"/>
+        <ViewModelPropertyNumber name="depth" id="0:51"/>
+        <ViewModelPropertyNumber name="detail" id="0:52"/>
+        <ViewModelPropertyNumber name="palette" id="0:53"/>
+        <ViewModelPropertyString name="paletteLabel" id="0:54"/>
+        <ViewModelPropertyList name="blobs" id="0:55"/>
+        <ViewModelPropertyNumber name="build" id="0:56"/>
+        <ViewModelPropertyTrigger name="rebuild" id="0:57"/>
+        <ViewModelPropertyNumber name="locks" id="0:301"/>
+        <ViewModelPropertyNumber name="losses" id="0:302"/>
+        <ViewModelPropertyTrigger name="hoverIn" id="0:304"/>
+        <ViewModelPropertyTrigger name="hoverOut" id="0:305"/>
+        <ViewModelInstance exports="true" name="Default" id="0:41">
+            <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:42"/>
+            <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:43"/>
+            <ViewModelInstanceNumber propertyValue="30" viewModelPropertyId="0:44"/>
+            <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:45"/>
+            <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:46"/>
+            <ViewModelInstanceBoolean propertyValue="true" viewModelPropertyId="0:47"/>
+            <ViewModelInstanceString propertyValue="FBM 3+2 OCT   WARP 0.90   ISO 30   DEPTH 0.16" viewModelPropertyId="0:48"/>
+            <ViewModelInstanceString propertyValue="BLOB TRACK   00 LOCKED" viewModelPropertyId="0:49"/>
+            <ViewModelInstanceString propertyValue="T+ 00:00.00" viewModelPropertyId="0:50"/>
+            <ViewModelInstanceNumber propertyValue="0.16" viewModelPropertyId="0:51"/>
+            <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:52"/>
+            <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:53"/>
+            <ViewModelInstanceString propertyValue="PALETTE   COBALT" viewModelPropertyId="0:54"/>
+            <ViewModelInstanceList viewModelPropertyId="0:55"/>
+            <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:56"/>
+            <ViewModelInstanceTrigger viewModelPropertyId="0:57"/>
+            <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:301"/>
+            <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:302"/>
+            <ViewModelInstanceTrigger viewModelPropertyId="0:304"/>
+            <ViewModelInstanceTrigger viewModelPropertyId="0:305"/>
+        </ViewModelInstance>
+    </ViewModel>
+
+    <FontAsset file="assets/JetBrainsMono.ttf" name="JetBrainsMono" id="0:60"/>
+    <ScriptAsset file="sphere.as" name="sphere" id="0:80"/>
+    <ScriptAsset file="soundtrack.as" name="soundtrack" id="0:303"/>
+</Rive>

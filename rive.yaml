@@ -1,0 +1,11 @@
+name: contour_sphere
+main: Sphere
+scripting: wasm
+output:
+  dir: build
+logs:
+  file: build/rive.log
+  problems: build/problems.log
+pages:
+  teamId: 418769
+  name: "contour-sphere"

@@ -1,0 +1,85 @@
+<Rive version="1" kind="fragment">
+    <!-- One tracked blob in the list: its id, whether it is a peak or a
+         hollow, how high its bounding contour floats and where it sits. -->
+    <Artboard isComponent="true" viewModelId="0:150" viewModelInstanceId="0:156" x="1500" y="0" width="332" height="32" styleId="0:161" name="BlobRow" id="0:160">
+        <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" name="BlobRow Style" id="0:161"/>
+        <LayoutComponent clip="false" styleId="0:163" name="Row" id="0:162">
+            <DataBindContext sourcePathIds="0:150-0:155" propertyKey="18"/>
+            <LayoutComponentStyle layoutWidthScaleType="fill" layoutHeightScaleType="fill"
+                flexDirectionValue="row" layoutAlignmentType="centerLeft"
+                paddingLeft="10" paddingLeftUnitsValue="points" paddingRight="10" paddingRightUnitsValue="points"
+                gapHorizontal="12" gapHorizontalUnitsValue="points" cornerRadiusTL="3" name="Row Style" id="0:163"/>
+            <Fill name="Fill">
+                <SolidColor colorValue="0DFFFFFF" name="Color"/>
+            </Fill>
+
+            <LayoutComponent clip="false" width="8" height="8" styleId="0:165" name="Marker" id="0:164">
+                <LayoutComponentStyle layoutWidthScaleType="fixed" layoutHeightScaleType="fixed" name="Marker Style" id="0:165"/>
+                <Stroke thickness="1" name="Stroke">
+                    <SolidColor colorValue="CCFFFFFF" name="Color"/>
+                </Stroke>
+            </LayoutComponent>
+            <Text name="Ident" id="0:166">
+                <LayoutParticipant layoutWidthScaleType="fixed" width="46" layoutHeightScaleType="hug" name="Ident Layout"/>
+                <TextStylePaint fontSize="13" letterSpacing="0.8" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Ident Style" id="0:167">
+                    <Fill name="Fill">
+                        <SolidColor colorValue="F2FFFFFF" name="Color"/>
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:167" text="2080" name="Run">
+                    <DataBindContext sourcePathIds="0:150-0:151" propertyKey="268"/>
+                </TextValueRun>
+            </Text>
+            <Text name="Kind" id="0:168">
+                <LayoutParticipant layoutWidthScaleType="fixed" width="60" layoutHeightScaleType="hug" name="Kind Layout"/>
+                <TextStylePaint fontSize="13" letterSpacing="0.8" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Kind Style" id="0:169">
+                    <Fill name="Fill">
+                        <SolidColor colorValue="99FFFFFF" name="Color"/>
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:169" text="PEAK" name="Run">
+                    <DataBindContext sourcePathIds="0:150-0:152" propertyKey="268"/>
+                </TextValueRun>
+            </Text>
+            <Text name="Elevation" id="0:170">
+                <LayoutParticipant layoutWidthScaleType="fixed" width="40" layoutHeightScaleType="hug" name="Elevation Layout"/>
+                <TextStylePaint fontSize="13" letterSpacing="0.8" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Elevation Style" id="0:171">
+                    <Fill name="Fill">
+                        <SolidColor colorValue="99FFFFFF" name="Color"/>
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:171" text="50%" name="Run">
+                    <DataBindContext sourcePathIds="0:150-0:153" propertyKey="268"/>
+                </TextValueRun>
+            </Text>
+            <Text alignValue="right" name="Coords" id="0:172">
+                <LayoutParticipant layoutWidthScaleType="fill" layoutHeightScaleType="hug" name="Coords Layout"/>
+                <TextStylePaint fontSize="13" letterSpacing="0.8" fontAssetId="0:60" familyName="JetBrains Mono" styleName="Regular" name="Coords Style" id="0:173">
+                    <Fill name="Fill">
+                        <SolidColor colorValue="D9FFFFFF" name="Color"/>
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:173" text="700, 500" name="Run">
+                    <DataBindContext sourcePathIds="0:150-0:154" propertyKey="268"/>
+                </TextValueRun>
+            </Text>
+        </LayoutComponent>
+    </Artboard>
+
+    <ComponentAsset artboardId="0:160" name="BlobRow"/>
+
+    <ViewModel defaultInstanceId="0:156" name="Blob" id="0:150">
+        <ViewModelPropertyString name="ident" id="0:151"/>
+        <ViewModelPropertyString name="kind" id="0:152"/>
+        <ViewModelPropertyString name="elevation" id="0:153"/>
+        <ViewModelPropertyString name="coords" id="0:154"/>
+        <ViewModelPropertyNumber name="alpha" id="0:155"/>
+        <ViewModelInstance exports="true" name="Default" id="0:156">
+            <ViewModelInstanceString propertyValue="2080" viewModelPropertyId="0:151"/>
+            <ViewModelInstanceString propertyValue="PEAK" viewModelPropertyId="0:152"/>
+            <ViewModelInstanceString propertyValue="50%" viewModelPropertyId="0:153"/>
+            <ViewModelInstanceString propertyValue="700, 500" viewModelPropertyId="0:154"/>
+            <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:155"/>
+        </ViewModelInstance>
+    </ViewModel>
+</Rive>
