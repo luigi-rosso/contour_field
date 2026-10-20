@@ -75,3 +75,7 @@ These live on the `Field` view model, so they can be set from the editor or with
 On an Apple silicon Mac at 2x (a 2800 × 2000 canvas), a frame costs about 1 ms of GPU time. The scripts take about 0.2 ms per frame compiled, or about 0.8 ms on the interpreter. The sound processor uses a few percent of a core compiled.
 
 When most recent frames run slower than 50 fps, the canvas steps its resolution down to as low as 60% of the display density. It climbs back once frames keep up, and never retries a failed step for 30 s. `--define=FIXED_RES` pins the resolution for benchmarks.
+
+## License
+
+The code is under the MIT License (`LICENSE`). JetBrains Mono, in `assets/`, is under the SIL Open Font License (`assets/OFL-JetBrainsMono.txt`).
